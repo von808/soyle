@@ -1,0 +1,37 @@
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: montserrat, sans-serif;
+  background-color: rgba(#1A508B, 0.05);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+  padding-top: 80px;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.volume-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3E80CE;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img src="../images/logo.svg" alt="logo">
+          </a>
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__item-link" href="#">
+                Тематический словарь
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link" href="#">
+                Тренировки
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link nav__item-link--color  nav__item-link--active" href="#">
+                <svg class="book-orange">
+                  <use xlink:href="#book"></use>
+                </svg>
+                Карточки
+              </a>
+            </li>
+          </ul>
+          <a class="login" href="#">
+            Войти
+          </a>
+        </div>
+      </div>
+    </header>
+    <!--=include sprite.html-->
+    <main class="main">
+      <section class="cards-lesson cards-lesson--1">
+        <div class="container">
+          <div class="cards-lesson__inner">
+            <div class="cards-lesson__menu">
+              <h3 class="cards-lesson__type">Карточки: Популярные темы</h3>
+              <div class="cards-lesson__buttons">
+                <a class="cards-lesson__btn--back" href="#">Назад</a>
+              </div>
+            </div>
+            <div class="cards-lesson__content">
+              <div class="cards-lesson__help">
+                <img class="cards-lesson__help-img" src="../images/icon-help.svg" alt="help">
+                <div class="cards-lesson__help-text">
+                  Показать подсказку
+                </div>
+                <div class="cards-lesson__help-open">
+                  Ч — — — — —
+                </div>
+              </div>
+              <div class="cards-lesson__content-item">
+                <button class="volume-btn">
+                  <img class="volume" src="../images/icon-volume.svg" alt="volume">
+                </button>
+                <p class="cards-lesson__content-text">Ауыстыру</p>
+              </div>
+              <p class="cards-lesson__content-autoplay">Автовоспроизведение включено</p>
+            </div>
+            <div class="cards-lesson__controls-menu">
+              <div class="cards-lesson__controls-player">
+                <button class="cards-lesson__controls-play">
+                  <img class="cards-lesson__controls-play-play" src="../images/icon-play.svg" alt="play">
+                  <img class="cards-lesson__controls-play-pause" src="../images/icon-pause.svg" alt="pause">
+                </button>
+                <button class="cards-lesson__controls-random">
+                  <img class="cards-lesson__controls-random-off" src="../images/icon-random-off.svg" alt="random">
+                  <img class="cards-lesson__controls-random-on" src="../images/icon-random-on.svg" alt="random">
+                </button>
+              </div>
+              <div class="cards-lesson__controls">
+                <button class="cards-lesson__controls-btn cards-lesson__controls-btn--back">
+                  <img src="../images/arrow-left.svg" alt="back">
+                </button>
+                <div class="cards-lesson__controls-info">
+                  8/1093
+                </div>
+                <button class="cards-lesson__controls-btn cards-lesson__controls-btn--next">
+                  <img src="../images/arrow-right.svg" alt="next">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
