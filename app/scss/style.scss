@@ -219,6 +219,7 @@
 
   &__step-2-items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -425,7 +426,7 @@
 
   &__content-bottom {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -447,7 +448,8 @@
     border-radius: 25px;
     border: 1px dashed rgba(166, 175, 185, 0.30);
     padding: 20px;
-    width: 835px;
+    max-width: 835px;
+    width: 100%;
   }
 
   &--2 .training-lesson__content-middle {
@@ -472,6 +474,7 @@
 .cards {
   &__items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -593,6 +596,7 @@
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
     position: relative;
     padding: 115px 0 0;
+    margin-bottom: 20px;
   }
 
   &__help {
@@ -672,7 +676,6 @@
 
   &__controls-menu {
     height: 50px;
-    margin: 20px 0;
     position: relative;
   }
 
