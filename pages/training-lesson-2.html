@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img src="../images/logo.svg" alt="logo">
+          </a>
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__item-link" href="#">
+                Тематический словарь
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link nav__item-link--active" href="#">
+                Тренировки
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link nav__item-link--color" href="#">
+                <svg class="book-orange">
+                  <use xlink:href="#book"></use>
+                </svg>
+                Карточки
+              </a>
+            </li>
+          </ul>
+          <div class="user">
+            <a class="user__avatar" href="#">
+              <picture class="user__avatar-img">
+                <source srcset="images/user-avatar.avif" alt="avatar" type="image/avif">
+                <source srcset="images/user-avatar.webp" alt="avatar" type="image/webp">
+                <img src="images/user-avatar.jpg" alt="avatar">
+              </picture>
+            </a>
+            <div class="user__info">
+              <a class="user__name" href="#">Имя пользователя</a>
+              <div class="user__star">
+                <img class="user__star-img" src="../images/user-star.svg" alt="star">
+                4.9
+              </div>
+            </div>
+            <div class="user__arrow">
+              <img class="user__arrow-img" src="../images/user-arrow.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--=include sprite.html-->
+    <main class="main">
+      <section class="training-lesson training-lesson--2">
+        <div class="container">
+          <div class="training-lesson__inner">
+            <div class="training-lesson__menu">
+              <h3 class="training-lesson__type">Что вы услышали?</h3>
+              <div class="training-lesson__buttons">
+                <a class="training-lesson__btn training-lesson__btn--out" href="#">Выйти из тренировки</a>
+                <a class="training-lesson__btn training-lesson__btn--next" href="#">следующее слово</a>
+              </div>
+            </div>
+            <div class="training-lesson__content">
+              <div class="training-lesson__content-top">
+                <button class="volume-btn">
+                  <img class="volume" src="../images/icon-volume.svg" alt="volume">
+                </button>
+                <div class="training-lesson__content-middle">
+                  <button class="training-lesson__content-btn">Жұқа</button>
+                </div>
+              </div>
+              <div class="training-lesson__content-bottom">
+                <button class="training-lesson__content-btn">Жөке</button>
+                <button class="training-lesson__content-btn">Ауыстыру</button>
+                <button class="training-lesson__content-btn training-lesson__content-btn--active"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
