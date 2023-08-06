@@ -118,6 +118,12 @@
   padding: 12px 42.17px 13px 42.83px;
   background-color: #3E80CE;
   border-radius: 25px;
+  transition: all 0.2s linear;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .dictionary {
@@ -255,7 +261,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 50px;
-  width: 285px;
+  max-width: 285px;
   margin-left: auto;
 
   &__avatar {
@@ -329,11 +335,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px 0;
     margin-bottom: 27px;
   }
 
   &__buttons {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
@@ -378,10 +388,12 @@
 
   &__content-top {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 76px;
+    margin: 0 auto 76px;
+    max-width: 600px;
   }
 
   &__content-title {
@@ -390,6 +402,7 @@
     font-weight: 800;
     line-height: 180%;
     color: #3E80CE;
+    text-align: center;
   }
 
   &__content-middle {
@@ -397,7 +410,7 @@
     min-height: 80px;
     border-radius: 25px;
     padding: 15px;
-    margin-bottom: 45px;
+    margin: 0 auto 45px;
     border: 1px dashed rgba(166, 175, 185, 0.30);
     display: flex;
     align-items: center;
@@ -430,44 +443,50 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-  }
-
-  &--1 .training-lesson__content {
-    padding: 25px 130px 75px
-  }
-
-  &--2 .training-lesson__content {
-    padding: 95px 142px 75px
-  }
-
-  &--2 .training-lesson__content-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    border-radius: 25px;
-    border: 1px dashed rgba(166, 175, 185, 0.30);
-    padding: 20px;
-    max-width: 835px;
-    width: 100%;
-  }
-
-  &--2 .training-lesson__content-middle {
-    min-height: 50px;
-    border-radius: 25px;
-    padding: 0;
-    margin-bottom: 0;
-    border: none;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
     max-width: 861px;
+    margin: 0 auto;
   }
 
-  &--2 .training-lesson__content-bottom {
-    justify-content: center;
+  &--1 {
+    .training-lesson__content {
+      padding: 25px 25px 75px
+    }
+  }
+
+  &--2 {
+    .training-lesson__content {
+      padding: 95px 25px 75px
+    }
+
+    .training-lesson__content-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      border-radius: 25px;
+      border: 1px dashed rgba(166, 175, 185, 0.30);
+      padding: 20px;
+      max-width: 835px;
+      width: 100%;
+    }
+
+    .training-lesson__content-middle {
+      min-height: 50px;
+      border-radius: 25px;
+      padding: 0;
+      margin-bottom: 0;
+      border: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      max-width: 861px;
+    }
+
+    .training-lesson__content-bottom {
+      justify-content: center;
+    }
   }
 }
 
@@ -555,6 +574,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px 0;
     margin-bottom: 27px;
   }
 
@@ -646,6 +667,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2px;
   }
 
   &__content-text {
@@ -720,6 +742,7 @@
   &__controls-random {
     width: 32px;
     height: 32px;
+    background-color: transparent;
 
     &.active .cards-lesson__controls-random-off {
       display: none;
@@ -760,7 +783,8 @@
   }
 
   &__controls-info {
-    width: 222px;
+    max-width: 222px;
+    width: 100%;
     height: 50px;
     border-radius: 25px;
     border: 1px solid #A6AFB9;

@@ -13,7 +13,7 @@ body {
 
 .main {
   flex: 1 0 auto;
-  padding: 80px 0 20px;
+  padding: 80px 0;
 }
 
 .footer {
@@ -34,4 +34,101 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #3E80CE;
+}
+
+.burger {
+  &-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #3E80CE;
+    position: relative;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &-btn.active {
+    .burger-btn__line {
+      width: 33px;
+      top: 50%;
+      left: 50%;
+    }
+
+    .burger-btn__line--1 {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .burger-btn__line--2 {
+      opacity: 0;
+    }
+
+    .burger-btn__line--3 {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &-btn__line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s linear;
+  }
+
+  &-btn__line--1 {
+    top: 30%;
+  }
+
+  &-btn__line--3 {
+    top: 70%;
+  }
+
+  &-menu {
+    display: none;
+    width: fit-content;
+    height: 100vh;
+    padding: 25px 15px;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .nav {
+      display: block;
+      height: 34px;
+      padding: 5px 10px;
+    }
+    .nav__item{
+      margin: 20px 0;
+    }
+    .nav__item-link {
+      padding: 0;
+    }
+
+    .nav__item-link--color {
+      padding-left: 34px;
+    }
+
+    .login {
+      display: block;
+      margin-bottom: 15px;
+    }
+    .user {
+      display: flex;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-menu.active {
+    display: block;
+  }
+
 }
