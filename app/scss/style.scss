@@ -142,7 +142,7 @@
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
     padding: 10px;
     width: 360px;
-    border: 2px solid#fff;
+    border: 2px solid transparent;
     transition: all 0.1s linear;
 
     &:hover {
@@ -241,6 +241,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: 2px solid transparent;
+    transition: all 0.1s linear;
+
+    &:hover {
+      border: 2px solid#3E80CE;
+    }
   }
 
   &__step-2-item-title {
@@ -279,6 +285,8 @@
     source,
     img {
       border-radius: 50%;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -331,6 +339,13 @@
 }
 
 .training-lesson {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    min-height: 450px;
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -380,7 +395,7 @@
   }
 
   &__content {
-    min-height: 409px;
+    min-height: 200px;
     border-radius: 25px;
     background: #FFF;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
@@ -392,7 +407,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 76px;
+    margin: 0 auto 40px;
     max-width: 600px;
   }
 
@@ -449,13 +464,13 @@
 
   &--1 {
     .training-lesson__content {
-      padding: 25px 25px 75px
+      padding: 40px 25px 40px
     }
   }
 
   &--2 {
     .training-lesson__content {
-      padding: 95px 25px 75px
+      padding: 40px 25px 40px
     }
 
     .training-lesson__content-top {
@@ -509,6 +524,12 @@
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
+    transition: all 0.1s linear;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid#3E80CE;
+    }
 
     svg {
       width: 32px;
@@ -570,6 +591,13 @@
 }
 
 .cards-lesson {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    min-height: 450px;
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -611,12 +639,12 @@
   }
 
   &__content {
-    min-height: 409px;
+    min-height: 200px;
     border-radius: 25px;
     background: #FFF;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
     position: relative;
-    padding: 115px 0 0;
+    padding: 80px 20px 40px;
     margin-bottom: 20px;
   }
 

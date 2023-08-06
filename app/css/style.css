@@ -115,7 +115,7 @@ body {
 
 .main {
   flex: 1 0 auto;
-  padding: 80px 0;
+  padding: 40px 0 20px;
 }
 
 .footer {
@@ -365,7 +365,7 @@ body {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
   padding: 10px;
   width: 360px;
-  border: 2px solid #fff;
+  border: 2px solid transparent;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
@@ -470,6 +470,12 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.training__step-2-item:hover {
+  border: 2px solid #3E80CE;
 }
 .training__step-2-item-title {
   display: -webkit-box;
@@ -517,6 +523,8 @@ body {
 .user__avatar-img source,
 .user__avatar-img img {
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 .user__info {
   height: 50px;
@@ -585,6 +593,17 @@ body {
   cursor: pointer;
 }
 
+.training-lesson__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto 0;
+  min-height: 450px;
+}
 .training-lesson__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -640,7 +659,7 @@ body {
   background: #3E80CE;
 }
 .training-lesson__content {
-  min-height: 409px;
+  min-height: 200px;
   border-radius: 25px;
   background: #FFF;
   -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
@@ -659,7 +678,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 auto 76px;
+  margin: 0 auto 40px;
   max-width: 600px;
 }
 .training-lesson__content-title {
@@ -721,10 +740,10 @@ body {
   margin: 0 auto;
 }
 .training-lesson--1 .training-lesson__content {
-  padding: 25px 25px 75px;
+  padding: 40px 25px 40px;
 }
 .training-lesson--2 .training-lesson__content {
-  padding: 95px 25px 75px;
+  padding: 40px 25px 40px;
 }
 .training-lesson--2 .training-lesson__content-top {
   display: -webkit-box;
@@ -796,6 +815,12 @@ body {
   -ms-flex-align: center;
   align-items: center;
   gap: 32px;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  border: 2px solid transparent;
+}
+.cards__item:hover {
+  border: 2px solid #3E80CE;
 }
 .cards__item svg {
   width: 32px;
@@ -844,6 +869,17 @@ body {
   color: #FF6969;
 }
 
+.cards-lesson__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto 0;
+  min-height: 450px;
+}
 .cards-lesson__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -889,13 +925,13 @@ body {
   color: #FF8C7D;
 }
 .cards-lesson__content {
-  min-height: 409px;
+  min-height: 200px;
   border-radius: 25px;
   background: #FFF;
   -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
   position: relative;
-  padding: 115px 0 0;
+  padding: 80px 20px 40px;
   margin-bottom: 20px;
 }
 .cards-lesson__help {
@@ -1129,7 +1165,7 @@ body {
     margin-top: 68px;
   }
   .cards-lesson__controls-player {
-    top: -33px;
+    top: 25px;
   }
   .cards-lesson__controls-btn {
     flex: 0 0 48px;
@@ -1137,7 +1173,7 @@ body {
 }
 @media (max-width: 540px) {
   .main {
-    padding: 50px 0;
+    padding: 50px 0 20px;
   }
   .dictionary__item-title {
     font-size: 15px;
