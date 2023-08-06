@@ -110,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 }
 
 .main {
@@ -182,7 +183,7 @@ body {
 .burger-menu {
   display: none;
   width: fit-content;
-  height: 100vh;
+  height: 100%;
   padding: 25px 15px;
   background-color: #fff;
   z-index: 10;

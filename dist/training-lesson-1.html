@@ -11,6 +11,47 @@
 
 <body>
   <div class="wrapper">
+    <div class="burger-menu">
+      <div class="user">
+        <a class="user__avatar" href="#">
+          <picture class="user__avatar-img">
+            <source srcset="images/user-avatar.avif" alt="avatar" type="image/avif">
+            <source srcset="images/user-avatar.webp" alt="avatar" type="image/webp">
+            <img src="images/user-avatar.jpg" alt="avatar">
+          </picture>
+        </a>
+        <div class="user__info">
+          <a class="user__name" href="#">Имя пользователя</a>
+          <div class="user__star">
+            <img class="user__star-img" src="images/user-star.svg" alt="star">
+            4.9
+          </div>
+        </div>
+        <div class="user__arrow">
+          <img class="user__arrow-img" src="images/user-arrow.svg" alt="arrow">
+        </div>
+      </div>
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__item-link" href="#">
+            Тематический словарь
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item-link" href="#">
+            Тренировки
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item-link nav__item-link--color" href="#">
+            <svg class="book-orange">
+              <use xlink:href="#book"></use>
+            </svg>
+            Карточки
+          </a>
+        </li>
+      </ul>
+    </div>
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -61,47 +102,7 @@
             <span class="burger-btn__line burger-btn__line--2"></span>
             <span class="burger-btn__line burger-btn__line--3"></span>
           </div>
-          <div class="burger-menu">
-            <div class="user">
-              <a class="user__avatar" href="#">
-                <picture class="user__avatar-img">
-                  <source srcset="images/user-avatar.avif" alt="avatar" type="image/avif">
-                  <source srcset="images/user-avatar.webp" alt="avatar" type="image/webp">
-                  <img src="images/user-avatar.jpg" alt="avatar">
-                </picture>
-              </a>
-              <div class="user__info">
-                <a class="user__name" href="#">Имя пользователя</a>
-                <div class="user__star">
-                  <img class="user__star-img" src="images/user-star.svg" alt="star">
-                  4.9
-                </div>
-              </div>
-              <div class="user__arrow">
-                <img class="user__arrow-img" src="images/user-arrow.svg" alt="arrow">
-              </div>
-            </div>
-            <ul class="nav">
-              <li class="nav__item">
-                <a class="nav__item-link" href="#">
-                  Тематический словарь
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__item-link" href="#">
-                  Тренировки
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__item-link nav__item-link--color" href="#">
-                  <svg class="book-orange">
-                    <use xlink:href="#book"></use>
-                  </svg>
-                  Карточки
-                </a>
-              </li>
-            </ul>
-          </div>
+
         </div>
       </div>
     </header>
