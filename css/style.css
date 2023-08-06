@@ -114,7 +114,7 @@ body {
 
 .main {
   flex: 1 0 auto;
-  padding: 80px 0 20px;
+  padding: 80px 0;
 }
 
 .footer {
@@ -135,6 +135,86 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #3E80CE;
+}
+
+.burger-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #3E80CE;
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+}
+.burger-btn.active .burger-btn__line {
+  width: 33px;
+  top: 50%;
+  left: 50%;
+}
+.burger-btn.active .burger-btn__line--1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.burger-btn.active .burger-btn__line--2 {
+  opacity: 0;
+}
+.burger-btn.active .burger-btn__line--3 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.burger-btn__line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s linear;
+}
+.burger-btn__line--1 {
+  top: 30%;
+}
+.burger-btn__line--3 {
+  top: 70%;
+}
+.burger-menu {
+  display: none;
+  width: fit-content;
+  height: 100vh;
+  padding: 25px 15px;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 2px 0 15px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.burger-menu .nav {
+  display: block;
+  height: 34px;
+  padding: 5px 10px;
+}
+.burger-menu .nav__item {
+  margin: 20px 0;
+}
+.burger-menu .nav__item-link {
+  padding: 0;
+}
+.burger-menu .nav__item-link--color {
+  padding-left: 34px;
+}
+.burger-menu .login {
+  display: block;
+  margin-bottom: 15px;
+}
+.burger-menu .user {
+  display: flex;
+  margin-bottom: 15px;
+}
+.burger-menu.active {
+  display: block;
 }
 
 .header {
@@ -252,6 +332,12 @@ body {
   padding: 12px 42.17px 13px 42.83px;
   background-color: #3E80CE;
   border-radius: 25px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+.login:hover {
+  opacity: 0.9;
 }
 
 .dictionary__cards {
@@ -411,7 +497,7 @@ body {
   -ms-flex-pack: start;
   justify-content: flex-start;
   height: 50px;
-  width: 285px;
+  max-width: 285px;
   margin-left: auto;
 }
 .user__avatar {
@@ -508,12 +594,20 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 15px 0;
   margin-bottom: 27px;
 }
 .training-lesson__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .training-lesson__type {
@@ -555,6 +649,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 20px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -562,7 +658,8 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 76px;
+  margin: 0 auto 76px;
+  max-width: 600px;
 }
 .training-lesson__content-title {
   font-size: 32px;
@@ -570,13 +667,14 @@ body {
   font-weight: 800;
   line-height: 180%;
   color: #3E80CE;
+  text-align: center;
 }
 .training-lesson__content-middle {
   max-width: 861px;
   min-height: 80px;
   border-radius: 25px;
   padding: 15px;
-  margin-bottom: 45px;
+  margin: 0 auto 45px;
   border: 1px dashed rgba(166, 175, 185, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,12 +716,14 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 861px;
+  margin: 0 auto;
 }
 .training-lesson--1 .training-lesson__content {
-  padding: 25px 130px 75px;
+  padding: 25px 25px 75px;
 }
 .training-lesson--2 .training-lesson__content {
-  padding: 95px 142px 75px;
+  padding: 95px 25px 75px;
 }
 .training-lesson--2 .training-lesson__content-top {
   display: -webkit-box;
@@ -753,6 +853,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 15px 0;
   margin-bottom: 27px;
 }
 .cards-lesson__buttons {
@@ -854,6 +957,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 2px;
 }
 .cards-lesson__content-text {
   font-size: 32px;
@@ -935,6 +1039,7 @@ body {
 .cards-lesson__controls-random {
   width: 32px;
   height: 32px;
+  background-color: transparent;
 }
 .cards-lesson__controls-random.active .cards-lesson__controls-random-off {
   display: none;
@@ -983,7 +1088,8 @@ body {
   align-items: center;
 }
 .cards-lesson__controls-info {
-  width: 222px;
+  max-width: 222px;
+  width: 100%;
   height: 50px;
   border-radius: 25px;
   border: 1px solid #A6AFB9;
@@ -1008,7 +1114,85 @@ body {
   .logo {
     margin-right: 20px;
   }
-  .nav {
+  .nav,
+  .login,
+  .user {
     display: none;
+  }
+  .burger-btn {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .cards-lesson__controls {
+    margin-top: 68px;
+  }
+  .cards-lesson__controls-player {
+    top: -33px;
+  }
+  .cards-lesson__controls-btn {
+    flex: 0 0 48px;
+  }
+}
+@media (max-width: 540px) {
+  .main {
+    padding: 50px 0;
+  }
+  .dictionary__item-title {
+    font-size: 15px;
+  }
+  .training__step-1 {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .training__step-1-content {
+    margin-bottom: 15px;
+  }
+  .training__step-1-title,
+  .training__step-2-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .training__step-1-subtitle {
+    font-size: 15px;
+  }
+  .training__step-1-btn {
+    font-size: 11px;
+  }
+  .training-lesson__type {
+    font-size: 18px;
+  }
+  .training-lesson__content-title {
+    font-size: 18px;
+  }
+  .training-lesson__content-top {
+    margin: 0 auto 30px;
+  }
+  .training-lesson__content-middle {
+    margin: 0 auto 30px;
+  }
+  .training-lesson__content-btn {
+    font-size: 15px;
+    height: 30px;
+    padding: 5px 10px;
+    min-width: auto;
+  }
+  .training-lesson--2 .training-lesson__content {
+    padding: 25px 25px 75px;
+  }
+  .cards__item-title {
+    font-size: 15px;
+  }
+  .cards__item {
+    gap: 20px;
+  }
+  .cards-lesson__type {
+    font-size: 18px;
+  }
+  .cards-lesson__content-item {
+    gap: 10px;
+  }
+  .cards-lesson__content-text {
+    font-size: 18px;
   }
 }
