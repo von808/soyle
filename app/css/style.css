@@ -103,7 +103,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   font-family: montserrat, sans-serif;
-  background-color: rgba(26, 80, 139, 0.05);
+  background-color: rgba(62, 128, 206, 0.05);
 }
 
 .wrapper {
@@ -182,7 +182,7 @@ body {
 }
 .burger-menu {
   display: none;
-  width: fit-content;
+  max-width: 260px;
   height: 100%;
   padding: 25px 15px;
   background-color: #fff;
@@ -213,6 +213,7 @@ body {
 .burger-menu .user {
   display: flex;
   margin-bottom: 15px;
+  gap: 10px;
 }
 .burger-menu.active {
   display: block;
@@ -341,6 +342,9 @@ body {
   opacity: 0.9;
 }
 
+.dictionary {
+  padding-top: 40px;
+}
 .dictionary__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,19 +501,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  height: 50px;
+  min-height: 50px;
   max-width: 285px;
   margin-left: auto;
 }
 .user__avatar {
   display: block;
-  margin-right: 11px;
 }
 .user__avatar-img {
   display: block;
@@ -527,7 +530,7 @@ body {
   height: 50px;
 }
 .user__info {
-  height: 50px;
+  min-height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,9 +541,9 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: flex-left;
-  -ms-flex-align: flex-left;
-  align-items: flex-left;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .user__name {
   font-size: 12px;
@@ -591,6 +594,9 @@ body {
   align-items: center;
   margin-left: auto;
   cursor: pointer;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
 }
 
 .training-lesson__inner {
@@ -887,12 +893,10 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 15px 0;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 15px 10px;
   margin-bottom: 27px;
 }
 .cards-lesson__buttons {
@@ -1005,9 +1009,9 @@ body {
 }
 .cards-lesson__content-autoplay {
   display: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: absolute;
   bottom: 20px;
   left: 50%;

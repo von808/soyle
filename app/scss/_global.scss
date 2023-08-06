@@ -2,7 +2,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   font-family: montserrat, sans-serif;
-  background-color: rgba(#1A508B, 0.05);
+  background-color: rgba(#3E80CE, 0.05);
 }
 
 .wrapper {
@@ -92,7 +92,7 @@ body {
 
   &-menu {
     display: none;
-    width: fit-content;
+    max-width: 260px;
     height: 100%;
     padding: 25px 15px;
     background-color: #fff;
@@ -125,6 +125,7 @@ body {
     .user {
       display: flex;
       margin-bottom: 15px;
+      gap: 10px;
     }
   }
 

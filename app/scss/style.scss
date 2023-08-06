@@ -127,6 +127,7 @@
 }
 
 .dictionary {
+  padding-top: 40px;
   &__cards {
     display: flex;
     justify-content: center;
@@ -264,15 +265,14 @@
 
 .user {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  height: 50px;
+  min-height: 50px;
   max-width: 285px;
   margin-left: auto;
 
   &__avatar {
     display: block;
-    margin-right: 11px;
   }
 
   &__avatar-img {
@@ -291,11 +291,11 @@
   }
 
   &__info {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-left;
+    align-items: flex-start;
   }
 
   &__name {
@@ -335,6 +335,7 @@
     align-items: center;
     margin-left: auto;
     cursor: pointer;
+    flex: 0 0 50px;
   }
 }
 
@@ -601,9 +602,8 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px 0;
+    align-items: flex-start;
+    gap: 15px 10px;
     margin-bottom: 27px;
   }
 
@@ -708,7 +708,7 @@
 
   &__content-autoplay {
     display: none;
-    width: fit-content;
+    width: max-content;
     position: absolute;
     bottom: 20px;
     left: 50%;
