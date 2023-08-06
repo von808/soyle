@@ -792,6 +792,9 @@ body {
   justify-content: center;
 }
 
+.cards {
+  padding-top: 40px;
+}
 .cards__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,7 +887,10 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: auto 0;
-  min-height: 450px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: calc(100vh - 400px);
 }
 .cards-lesson__menu {
   display: -webkit-box;
@@ -929,7 +935,7 @@ body {
   color: #FF8C7D;
 }
 .cards-lesson__content {
-  min-height: 200px;
+  min-height: 250px;
   border-radius: 25px;
   background: #FFF;
   -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
@@ -937,6 +943,9 @@ body {
   position: relative;
   padding: 80px 20px 40px;
   margin-bottom: 20px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 .cards-lesson__help {
   position: absolute;
