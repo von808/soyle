@@ -351,7 +351,7 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 15px 0;
     margin-bottom: 27px;
